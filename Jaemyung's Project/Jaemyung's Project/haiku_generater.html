@@ -1,0 +1,71 @@
+<!DoOCTYPE html>
+<html>
+	<head>
+	
+		<script>
+			var clicks = 0
+			function testFunction() {
+				
+				clicks = clicks + 1
+				document.getElementById("theButton").innerHTML=
+					"I REFUSE";
+				document.getElementById("p1").innerHTML="Clicks:"+clicks;
+			}
+			
+			
+			function haiku(){
+				var fiveSyl = [
+					"I am really cool",
+					"Radioactive",
+					"Kevin likes Flora",
+					"I failed my check",
+					"California",
+					"T-Rex is awesome"
+					];
+			
+
+				var sevenSyl = [
+					"Can I go to the restroom",
+					"Kevin will go on a date",
+					"I broke my iphone today",
+					"Radiation Poisoning",
+					"Pterodactyls"
+					];
+				document.getElementById("line1").innerHTML=fiveSyl[Math.floor((Math.random() * fiveSyl.length))];
+				document.getElementById("line2").innerHTML=sevenSyl[Math.floor((Math.random() * sevenSyl.length))];
+				document.getElementById("line3").innerHTML=fiveSyl[Math.floor((Math.random() * fiveSyl.length))];
+			
+			}
+		
+		</script>
+		
+		<style>
+		
+		p {
+			font-family:"comic sans ms", "comic sans", cursive;
+			font-size:30px
+			color:white;
+			text-shadow: 5px 5px 10px #000000;
+			margin-top:85px
+		}
+		
+		body {
+			background-repeat:no-repeat;
+			background-size:cover;
+			
+		}
+
+		</style>
+	
+	
+	</head>
+	<body background="haiku board.jpg">
+		<center><p id="p1"></p>
+		<p id="line1" class="poem"></p>
+		<p id="line2" class="poem"></p>
+		<p id="line3" class="poem"></p></center>
+		<center><button id="theButton" type="button" onclick = "haiku()">Click Me!</button></center>
+	
+	</body>
+
+</html>
